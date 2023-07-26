@@ -1,10 +1,10 @@
 package org.example.model;
 
-        import lombok.Getter;
-        import lombok.NoArgsConstructor;
-        import lombok.Setter;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-        import javax.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "addresses")
@@ -17,7 +17,6 @@ public class Address {
     private int id;
     private String city;
     private String postalCode;
-
 
     @OneToOne(mappedBy = "address")
     private Employee employee;

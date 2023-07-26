@@ -16,7 +16,7 @@ public class CREATE {
                     .buildSessionFactory();
 
             Session session = factory.getCurrentSession();
-            Employee emp = new Employee("Lola", "Davalova", 2000);
+            Employee emp = new Employee(1,"Erica", "Diaciuc", 2000);
             session.beginTransaction();
             session.save(emp);
             int myId=emp.getId();
@@ -27,7 +27,6 @@ public class CREATE {
             System.out.println("Done");
 
         } finally {
-            assert factory != null;
             factory.close(); // Close the session factory when you are done using it.
         }
     }
